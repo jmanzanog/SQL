@@ -1,0 +1,12 @@
+select *from all_tables;
+
+
+create user administratordb identified by administratordb;
+grant connect to administratordb;
+grant all privileges to administratordb;
+
+
+create table usuarios(
+  nombre varchar2(30),
+  clave varchar2(10)
+);
