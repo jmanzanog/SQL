@@ -1,0 +1,33 @@
+SET SERVEROUTPUT ON;
+DECLARE
+    v_num NUMBER := 9;
+BEGIN
+ IF v_num < 10 THEN
+ DBMS_OUTPUT.PUT_LINE('Inside The IF');
+END IF;
+ DBMS_OUTPUT.PUT_LINE('outside The IF');
+END;
+/
+
+DECLARE
+ v_website VARCHAR2(30) := 'RebellionRider.com';
+ v_author VARCHAR2(30) := 'Manish';
+BEGIN
+ IF v_website ='RebellionRider.com' AND v_author= 'Manish' THEN
+ DBMS_OUTPUT.PUT_LINE('Everything is Awesome :)');
+END IF;
+ DBMS_OUTPUT.PUT_LINE('Give this Video a Thumbs Up');
+ END;
+/
+
+SET SERVEROUTPUT ON;
+DECLARE
+  v_num NUMBER := &enter_a_number;
+BEGIN
+ IF MOD (v_num, 2) = 0 THEN
+ DBMS_OUTPUT.PUT_LINE (v_num || ' Is Even');
+ ELSE
+ DBMS_OUTPUT.PUT_LINE (v_num ||' is odd');
+ END IF;
+ DBMS_OUTPUT.PUT_LINE ('IF THEN ELSE Construct complete ');
+END;
